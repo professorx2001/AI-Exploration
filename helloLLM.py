@@ -13,13 +13,18 @@ client = Groq(api_key = groq_api_key)
 
 model = "llama-3.3-70b-versatile"
 role = "user"
-content = "Do you know professorx2001"
+content = "Should I partition a fact table in Postgres which has one billion rows with 10+ indexes"
+
+message_system = {
+    "role": "system",
+    "content": "You have to act as Senior AWS Data Engineer"
+}
 message = {
     "role": role,
     "content": content
 }
 # list of messageges
-messages = [message]
+messages = [message_system,message]
 
 
 response = client.chat.completions.create(model=model, messages = messages)
