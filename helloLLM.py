@@ -13,7 +13,8 @@ client = Groq(api_key = groq_api_key)
 
 model = "llama-3.3-70b-versatile"
 role = "user"
-content = "Should I partition a fact table in Postgres which has one billion rows with 10+ indexes"
+temperature = 2 #by default it is 0 [0,1,2] increase randomness and creativity
+content = "Should I partition a fact table in Postgres which has one billion rows with 10+ indexes, answer in 100 words"
 
 message_system = {
     "role": "system",
@@ -27,7 +28,7 @@ message = {
 messages = [message_system,message]
 
 
-response = client.chat.completions.create(model=model, messages = messages)
+response = client.chat.completions.create(model=model, messages = messages, temperature = temperature)
 # print(response)
 
 answer = response.choices[0].message.content
