@@ -55,3 +55,5 @@ ticket_obj = Ticket(**data)
 print(f"I am {ticket_obj.name}")
 print(f"My Mail is {ticket_obj.email}")
 print(f"You can contact me at {ticket_obj.phone}")
+
+# python ./"First_Steps"/structured_output.py

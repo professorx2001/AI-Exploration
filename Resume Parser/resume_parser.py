@@ -253,5 +253,5 @@ def process():
     
     return results
 
-
+# python ./"Resume Parser"/resume_parser.py
 print(process())

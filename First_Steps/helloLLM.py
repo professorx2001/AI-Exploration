@@ -32,4 +32,5 @@ response = client.chat.completions.create(model=model, messages = messages, temp
 # print(response)
 
 answer = response.choices[0].message.content
+# python ./"First_Steps"/helloLLM.py 
 print(answer)

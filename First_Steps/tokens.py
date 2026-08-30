@@ -34,3 +34,6 @@ print(f"{answer}: Input/Prompt tokens used = {prompt_tokens}, Output/Completion 
 # If finish reason is stop means it stopped naturally but if it is length that means, the answer crossed the max_tokens we defined.
 
 # Hello. It's nice to meet you. Is there something I can help you with, or would you like to chat?: Input/Prompt tokens used = 40, Output/Completion tokens used = 26, Finish reason = stop
+
+
+# python ./"First_Steps"/tokens.py
